@@ -1,5 +1,5 @@
 resource "null_resource" "testing" {
-  count = var.test ? 1 : 0
+  count = ${var.test} ? 1 : 0
 
   triggers = { test = "true" }
 
